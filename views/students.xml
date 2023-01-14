@@ -1,0 +1,67 @@
+<odoo>
+    <data>
+
+        <!--ocultando ifmracion del formulario -->
+        <record id="res_partner_inherit_form_view" model="ir.ui.view">
+            <field name="name">res.partner.inherit.form.view</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+
+
+                <xpath expr="//field[@name='parent_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+
+                <xpath expr="//field[@name='category_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='title']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='function']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='website']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='vat']" position="attributes">
+                    <attribute name="string">Cédula</attribute>
+                    <attribute name="placeholder">056-0123456-7</attribute>
+                </xpath>
+
+
+                <xpath expr="//field[@name='company_type']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//page[@name='contact_addresses']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//page[@name='sales_purchases']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+
+
+                <notebook>
+
+                    <page string="DATOS PARA EMERGENCIA">
+                        <group>
+
+                        </group>
+
+                    </page>
+                </notebook>
+
+            </field>
+        </record>
+
+
+
+    </data>
+</odoo>

@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="registrodigital.list">
+      <field name="name">registrodigital list</field>
+      <field name="model">registrodigital.registrodigital</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="registrodigital.action_window">
+      <field name="name">registrodigital window</field>
+      <field name="res_model">registrodigital.registrodigital</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="registrodigital.action_server">
+      <field name="name">registrodigital server</field>
+      <field name="model_id" ref="model_registrodigital_registrodigital"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="registrodigital" id="registrodigital.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="registrodigital.menu_1" parent="registrodigital.menu_root"/>
+    <menuitem name="Menu 2" id="registrodigital.menu_2" parent="registrodigital.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="registrodigital.menu_1_list" parent="registrodigital.menu_1"
+              action="registrodigital.action_window"/>
+    <menuitem name="Server to list" id="registrodigital" parent="registrodigital.menu_2"
+              action="registrodigital.action_server"/>
+-->
+  </data>
+</odoo>

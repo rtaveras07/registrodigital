@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+
+
+        <!--MENU-->
+         <!-- Top menu item -->
+        <menuitem name="REGISTRO DIGITAL" id="registrodigital.menu_root"/>
+
+        <record model="ir.actions.act_window" id="registrodigital.students_action_window">
+            <field name="name">Estudiantes</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- menu categories -->
+        <menuitem name="Estudiantes" id="registrodigital.estudiantes" parent="registrodigital.menu_root"
+                  action="registrodigital.students_action_window"
+        />
+
+
+    </data>
+</odoo>
